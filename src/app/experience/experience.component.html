@@ -1,0 +1,45 @@
+<section id="experience" class="py-20 bg-slate-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Work Experience</h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto">My professional journey building scalable software solutions</p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="relative">
+        <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200 hidden md:block"></div>
+
+        <div *ngFor="let exp of experiences" class="relative mb-12 md:pl-20">
+          <div class="absolute left-6 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg hidden md:block"></div>
+          <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 p-8">
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold text-slate-800 mb-2">{{ exp.title }}</h3>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3">
+                  <div class="text-blue-600 font-semibold">
+                    <a *ngIf="exp.link" [href]="exp.link" target="_blank" rel="noopener" class="hover:underline">{{ exp.company }}</a>
+                    <span *ngIf="!exp.link">{{ exp.company }}</span>
+                  </div>
+                  <div class="text-slate-600">{{ exp.location }}</div>
+                </div>
+                <div class="text-slate-500 mb-4">{{ exp.period }}</div>
+              </div>
+            </div>
+
+            <ul class="space-y-2 mb-6">
+              <li *ngFor="let d of exp.description" class="text-slate-600 flex items-start">
+                <span class="text-blue-600 mr-2 mt-2">•</span>
+                <span class="leading-relaxed">{{ d }}</span>
+              </li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2">
+              <span *ngFor="let t of exp.technologies" class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-200">{{ t }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
