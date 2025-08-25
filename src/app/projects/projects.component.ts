@@ -53,7 +53,7 @@ export class ProjectsComponent {
           'Prototyping retrieval-augmented generation and lightweight agents. Focus on evaluation, context windows and latency/cost trade-offs. README pending; code structure prepared for iterative experiments.',
       technologies: ['Python', 'LangChain', 'Nebius', 'LLM tooling'],
       challenges: ['Prompt quality & grounding', 'Context management', 'Evaluation/guardrails'],
-      githubUrl: null,   // add when you share the repo
+      githubUrl: 'https://github.com/vivianagh/deep-research-legal-ai',
       liveUrl: null,
       status: 'in-progress',
       year: '2025'
