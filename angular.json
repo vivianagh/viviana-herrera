@@ -58,7 +58,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-              "baseHref": "/angular-portfolio/"
+              "baseHref": "/viviana-herrera/"
             }
         }
       }
