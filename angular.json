@@ -54,6 +54,12 @@
               "buildTarget": "angular-portfolio:build:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+              "baseHref": "/angular-portfolio/"
+            }
         }
       }
     }
