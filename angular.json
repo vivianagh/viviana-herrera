@@ -47,11 +47,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "angular-portfolio:build"
+            "buildTarget": "viviana-herrera:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "angular-portfolio:build:production"
+              "buildTarget": "viviana-herrera:build:production"
             }
           }
         },
