@@ -31,21 +31,8 @@
         </div>
 
         <div class="flex gap-3 p-6 pt-0">
-          <ng-container *ngIf="p.githubUrl && p.githubUrl.length > 0">
-            <a *ngFor="let url of p.githubUrl; let i = index"
-               [href]="url"
-               target="_blank"
-               class="flex-1 text-center bg-slate-800 hover:bg-slate-700 text-white px-3 py-2 rounded">
-               Code {{ p.githubUrl.length > 1 ? (i === 0 ? '(Backend)' : '(Frontend)') : '' }}
-            </a>
-          </ng-container>
-
-          <a *ngIf="p.liveUrl"
-             [href]="p.liveUrl"
-             target="_blank"
-             class="flex-1 text-center border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded">
-             Live Demo
-          </a>
+          <a *ngIf="p.githubUrl" [href]="p.githubUrl" target="_blank" class="flex-1 text-center bg-slate-800 hover:bg-slate-700 text-white px-3 py-2 rounded">Code</a>
+          <a *ngIf="p.liveUrl" [href]="p.liveUrl" target="_blank" class="flex-1 text-center border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-3 py-2 rounded">Live Demo</a>
         </div>
 
         <div *ngIf="p.status === 'in-progress'" class="flex items-center space-x-2 text-orange-600 bg-orange-50 px-4 py-2 rounded-b-lg">

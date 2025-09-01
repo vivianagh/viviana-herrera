@@ -7,7 +7,7 @@ interface Project {
   longDescription: string;
   technologies: string[];
   challenges: string[];
-  githubUrl?: string[];
+  githubUrl?: string | null;
   liveUrl?: string | null;
   status: 'completed' | 'in-progress';
   year: string;
@@ -41,10 +41,7 @@ export class ProjectsComponent {
           'Event-driven backend publishes/consumes flight updates (producers/consumers, topic design, DLQ). Frontend shows live streams and status changes. Designed to illustrate EDA patterns and backpressure handling.',
       technologies: ['Apache Kafka', 'Spring Boot', 'Angular', 'TypeScript', 'Docker'],
       challenges: ['Event schema/versioning', 'Ordering vs. throughput', 'Real-time updates from backend to frontend'],
-      githubUrl: [
-                'https://github.com/vivianagh/flightapp',     
-                'https://github.com/vivianagh/flight-tracker-ui'  
-            ],
+      githubUrl: 'https://github.com/vivianagh/flightapp',
       liveUrl: null,
       status: 'in-progress',
       year: '2025'
